@@ -1,0 +1,26 @@
+<%- include("partials/header") %>
+<div style="margin-top: 5.0em; width: 100%;" id='div1' class="ui main text container segment">
+    <div class="ui huge header"><%= data.title %></div>
+    <div id="div2" class="ui top attached">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; column-gap: 1em;" class="item">
+            <div style="grid-row: 30%;">
+                <img class="ui centered rounded image"src="<%= data.image %>">
+                <h2 style="text-align: center;"><%= data.title %></h2>
+            </div>
+           
+            <div style='grid-row: 1/3'class="description">
+                <u><b><p>Brief info about recipe....</p></b></u>
+                <p><%- data.summary %></p>
+            </div>
+            <div style="justify-content: center;" class="ui buttons">
+                <a href=<%= data.sourceUrl %>><button class="ui negative button">Full recipe</button></a>
+                <div class="or"></div>
+                <a href="/nutrition/<%= data.id %>" > <button class="ui positive button">Nutritional values</button></a>
+            </div>
+            
+        </div>
+    </div>
+ 
+</div>
+
+<%- include("partials/footer") %>

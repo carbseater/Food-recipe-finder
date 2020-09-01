@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Recipes</title>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="stylesheets/app.css">
+
+    </head>
+    <body>
+       <div class="ui fixed inverted menu">
+           <div class="ui container">
+               <div class="header item"><i style="font-size: 2em;" class="blogger icon"></i>Recipe</div>
+               <a href="/" class="item">Home</a>
+               <form action="/result" method="GET">
+                   <input style="display: none;" type="text" name="search">
+                   <button style="height: 54px;"class="ui black button active" type="submit">Random recipe</button>
+               </form>
+           </div>
+       </div>
