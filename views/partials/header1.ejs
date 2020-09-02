@@ -6,7 +6,9 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     
-    <style>
+   
+    
+<style>
 
 
 img{
@@ -22,14 +24,14 @@ img{
     margin-top: 1em;
     
 }
-.container{
+/* .container{
     display: grid;
     grid-template-columns: 30% 70%;
     column-gap: 1em;
     margin-top: 10%;
    
     
-}
+} */
 #content1{
    background-color: lightgrey;
    padding: 2em;
@@ -43,10 +45,13 @@ h1{
   border: 1px solid black;
     
 }
+.row{
+    margin-top: 6em;
+}
     </style>
 </head>
 <body>
-   
+   <div class="row">
     <div class="ui fixed inverted menu">
         <div style="margin-top: 0%; height: 54px;"class="ui container">
             <div class="header item"><i style="font-size: 2em;" class="blogger icon"></i>Recipe</div>
@@ -54,44 +59,50 @@ h1{
             <a href="/random"><button style="height: 54px;"class="ui black button active" type="submit">Random recipe</button></a>  
         </div>
     </div>
+   </div>
+    
     
     
 
     <div class="container">
-        <div id="content1">
-            <h1 class="ui header">
-                <img src="https://images.cdn3.stockunlimited.net/preview1300/plate-fork-and-knife_1521905.jpg" class="ui circular image">
-                Food Recipes
-            </h1>
-            
-            <h4>Find Delicious food and their full recipes with <strong>Nutritional</strong> values</h4>
-            <form action="/result" method="GET">
-                <div id="input1" class="ui category search">
-                    <div class="ui icon input">
-                      <input class="prompt" type="text" placeholder="search food..." name="search">
-                      <i style="size: 5px;" class="search icon"></i>
-                    </div>
-                    
-                    <button type='submit'class="fluid ui black button " id='btn1'>Search</button>
+        <div class='row'>
+            <div class=' col-lg-4 ' id="content1" >
+                <h1 class="ui header">
+                    <img src="https://images.cdn3.stockunlimited.net/preview1300/plate-fork-and-knife_1521905.jpg" class="ui circular image">
+                    Food Recipes
+                </h1>
+                
+                <h4>Find Delicious food and their full recipes with <strong>Nutritional</strong> values</h4>
+                <form action="/result" method="GET">
+                    <div id="input1" class="ui category search">
+                        <div class="ui icon input">
+                          <input class="prompt" type="text" placeholder="search food..." name="search">
+                          <i style="size: 5px;" class="search icon"></i>
+                        </div>
+                        
+                        <button type='submit'class="fluid ui black button " id='btn1'>Search</button>
+                      </div>
+                </form>
+                
+            </div>
+        <div class=" col-lg-8" >
+            <div id="" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-interval="2000">
+                      
+                      <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=924&q=80" class="d-block w-100" >
+                      
                   </div>
-            </form>
+                  <div class="carousel-item " data-interval="2000">
+                    <img src="https://images.unsplash.com/photo-1589301773859-bb024d3ad558?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" class="d-block w-100" >
+                  </div>
+                  <div class="carousel-item " data-interval="2000">
+                    <img src="https://images.unsplash.com/photo-1552590635-27c2c2128abf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" class="d-block w-100">
+                  </div>
+                </div>
+              </div>
+        </div>
             
         </div>
-
-        <div id="" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active" data-interval="2000">
-                  
-                  <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=924&q=80" class="d-block w-100" >
-                  
-              </div>
-              <div class="carousel-item " data-interval="2000">
-                <img src="https://images.unsplash.com/photo-1589301773859-bb024d3ad558?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" class="d-block w-100" >
-              </div>
-              <div class="carousel-item " data-interval="2000">
-                <img src="https://images.unsplash.com/photo-1552590635-27c2c2128abf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" class="d-block w-100">
-              </div>
-            </div>
-          </div>
     </div>
     

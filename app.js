@@ -57,10 +57,8 @@ app.get('/nutrition/:id', function (req,res) {
     })
 })
 
-// app.get('/result', function (req, res) {
-//     res.render('result');
-// })
 
-app.listen(process.env.PORT, function () {
-    console.log("Server Running");
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
 });
