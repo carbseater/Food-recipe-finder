@@ -57,6 +57,10 @@ app.get('/nutrition/:id', function (req,res) {
     })
 })
 
+app.get('/about', function (req, res) {
+    res.render('about');
+})
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
