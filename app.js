@@ -38,6 +38,17 @@ app.get('/recipe/:id', function (req, res) {
     
 });
 
+app.get('/random', function (req, res) {
+    
+    var url1 = "https://api.spoonacular.com/recipes/random?number=10&apiKey=785125ae78a34bd78bbccf5f135f6da9"
+    
+    request(url1, function (error, response, body1) {
+        var data = JSON.parse(body1);
+        res.render('random',{data:data});
+    })
+    
+});
+
 app.get('/nutrition/:id', function (req,res) {
     var query = req.params.id;
     var url = "https://api.spoonacular.com/recipes/" + query + "/nutritionWidget?defaultCss=true";

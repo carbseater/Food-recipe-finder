@@ -1,0 +1,29 @@
+<%- include("partials/header") %>
+<div style="margin-top: 60px;" class="ui main text container">
+    <div class="ui huge header">Search Results...</div>
+    <div class="ui top attached segment">
+        <div class="ui divided items">
+            <% data["results"].forEach(function(food){ %>
+                <div class="item">
+                    <div class="image">
+                        <img src="<%= food.image %>">
+                     </div>
+                    <div class="content">
+                        <a class="header" href="/recipe/<%= food.id %>">  <%= food.title %> </a>
+                        <div class="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, odit error voluptas alias maxime, impedit, officia velit delectus cumque dolorum harum libero repellat.
+                        </div>
+                        
+                        
+                        <div class="extra">
+                            <a class="ui blue button" href="/recipe/<%= food.id %>"> Find Recipe </a>
+                        </div>
+                    </div>
+                </div>
+           <% }); %>
+        </div>
+    </div>
+</div>
+<%- include("partials/footer") %>
+
+
