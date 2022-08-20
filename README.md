@@ -1,5 +1,6 @@
+# Deployed link
 https://secure-forest-87086.herokuapp.com/ Deployed URL of website
-# Food Api
+# Food recipe finder
 Install Node to run this web Application
 node app.js
 
